@@ -11,17 +11,17 @@ function mostrarEquipo(equipo) {
     liverpool: {
       nombre: "Liverpool FC",
       descripcion: "Camiseta 2019/20 – año en que ganaron la Premier después de 30 años.",
-      img: "img/liverpool.jpg"
+      img: "img/liverpool2019.jpg"
     },
     manutd: {
       nombre: "Manchester United",
       descripcion: "Camiseta 2008 – cuando ganaron la Champions con Cristiano y Rooney.",
-      img: "img/manutd.jpg"
+      img: "img/manchesterutd2008.jpg"
     },
     barcelona: {
       nombre: "FC Barcelona",
       descripcion: "Camiseta 2011 – el equipo de Guardiola, Messi, Xavi e Iniesta.",
-      img: "img/barcelona.jpg"
+      img: "img/barcelona2011.jpg"
     },
     real: {
       nombre: "Real Madrid",
