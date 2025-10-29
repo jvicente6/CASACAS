@@ -7,8 +7,8 @@ body {
 }
 .banner img {
   width: 100%;
-  height: 200px;   /* podés ajustar */
-  object-fit: cover; /* recorta sin deformar */
+  max-height: 200px;     /* limita la altura del banner */
+  object-fit: cover;     /* recorta la imagen sin deformarla */
   display: block;
 }
 
