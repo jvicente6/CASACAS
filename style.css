@@ -5,17 +5,73 @@ body {
   height: 100vh;
   background: #f3f3f3;
 }
+/* --- Banner --- */
 .banner {
   width: 100%;
-  height: 200px; /* alto del banner */
-  overflow: hidden; /* recorta lo que sobra */
+  height: 200px;
+  overflow: hidden;
 }
 
 .banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ajusta sin deformar */
+  object-fit: cover;
   display: block;
+}
+
+/* --- Layout debajo del banner --- */
+.layout {
+  display: flex;
+  height: calc(100vh - 200px); /* ocupa todo el alto restante */
+}
+
+/* --- Sidebar (menú lateral) --- */
+.sidebar {
+  width: 250px;
+  background: #111;
+  color: #fff;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.liga {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.equipos li {
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.equipos li:hover {
+  color: #fff;
+}
+
+.oculto {
+  display: none;
+}
+
+/* --- Contenido principal --- */
+.contenido {
+  flex: 1;
+  background: #f3f3f3;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
 
 }
 
