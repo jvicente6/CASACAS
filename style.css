@@ -8,7 +8,7 @@ body {
 /* --- Banner --- */
 .banner {
   width: 100%;
-  height: 200px;
+  height: 160px; /* más chico que antes */
   overflow: hidden;
 }
 
@@ -16,6 +16,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 70%; /* BAJA la imagen sin tocar el bloque */
   display: block;
 }
 
