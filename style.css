@@ -1,19 +1,33 @@
-/* Fuente general */
+/* General */
 body {
   margin: 0;
   background-color: #1e1b26;
   color: #eaeaea;
   font-family: 'Poppins', sans-serif;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Banner */
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
 .banner img {
   width: 100%;
-  height: 260px; /* un poco más alto */
+  height: 260px;
   object-fit: cover;
-  object-position: center 70%; /* baja un poco la imagen dentro del banner */
+  object-position: center 70%;
   display: block;
+}
+
+/* Contenedor principal */
+.main {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 260px); /* resto del espacio sin el banner */
 }
 
 /* Sidebar */
@@ -21,7 +35,6 @@ body {
   width: 240px;
   background-color: #18141f;
   padding: 25px 20px;
-  height: 100vh;
   box-sizing: border-box;
   font-size: 15px;
 }
@@ -50,7 +63,7 @@ body {
   color: #ffffff;
 }
 
-/* Equipos ocultos */
+/* Equipos */
 .equipos {
   margin-left: 15px;
 }
@@ -59,11 +72,12 @@ body {
   display: none;
 }
 
-/* Contenido */
+/* Contenido principal */
 .contenido {
   flex: 1;
   padding: 30px;
   text-align: center;
+  background-color: #1e1b26;
 }
 
 #titulo {
@@ -103,3 +117,4 @@ body {
   font-weight: 500;
   color: #eaeaea;
 }
+
