@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Camisetas del Mundo</title>
 
+  <!-- Fuente Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Enlace al CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Banner -->
+  <!-- Banner superior -->
   <header class="banner">
-    <img src="img/1000024372.jpg" alt="Banner de camisetas">
+    <img src="img/1000024372.jpg" alt="Banner de camisetas" />
   </header>
 
   <!-- Contenedor principal -->
   <div class="contenido-principal">
-
-    <!-- Sidebar -->
+    
+    <!-- Sidebar con ligas -->
     <aside class="sidebar">
       <h2>Ligas</h2>
       <ul>
         <li class="liga" onclick="toggleLiga('premier')">Premier League ▸</li>
         <ul id="premier" class="equipos oculto">
           <li onclick="mostrarEquipo('liverpool')">Liverpool</li>
-          <li onclick="mostrarEquipo('manutd')">Manchester United</li>
+          <li onclick="mostrarEquipo('manutd')">Man. United</li>
         </ul>
 
         <li class="liga" onclick="toggleLiga('laliga')">LaLiga ▸</li>
@@ -35,24 +39,25 @@
       </ul>
     </aside>
 
-    <!-- Contenido -->
+    <!-- Contenido principal -->
     <main class="contenido">
       <h1 id="titulo">Selecciona un equipo</h1>
 
+      <!-- Contenedor donde aparecen las camisetas -->
       <div id="info">
-        <div class="card">
+        <div>
           <img src="img/realmadrid.jpg" alt="Real Madrid">
           <p>Real Madrid 2011/12</p>
         </div>
-        <div class="card">
+        <div>
           <img src="img/barcelona2011.jpg" alt="Barcelona">
           <p>Barcelona 2011</p>
         </div>
-        <div class="card">
+        <div>
           <img src="img/liverpool2019.jpg" alt="Liverpool">
           <p>Liverpool 2019</p>
         </div>
-        <div class="card">
+        <div>
           <img src="img/manchesterutd2008.jpg" alt="Manchester United">
           <p>Manchester United 2008</p>
         </div>
@@ -60,6 +65,7 @@
     </main>
   </div>
 
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
