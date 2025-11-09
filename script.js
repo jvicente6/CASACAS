@@ -13,22 +13,22 @@ function mostrarEquipo(equipo) {
     titulo.textContent = "Barcelona";
     contenido = `
       <div class="camiseta">
-        <img src="img/barcelona2011.jpg" alt="Camiseta Barcelona">
+        <img src="camisetas/barcelona2011.jpg" alt="Camiseta Barcelona">
         <p>Barcelona 2010/11</p>
       </div>
       
       <div class="camiseta">
-        <img src="img/barcelona2015.jpg" alt="Camiseta Barcelona">
+        <img src="camisetas/barcelona2015.jpg" alt="Camiseta Barcelona">
         <p>Barcelona 2015/16</p>
       </div>
       
       <div class="camiseta">
-        <img src="img/barcelona2008-2009.jpeg" alt="Camiseta Barcelona">
+        <img src="camisetas/barcelona2008-2009.jpeg" alt="Camiseta Barcelona">
         <p>Barcelona 2008/09</p>
       </div>
 
        <div class="camiseta">
-        <img src="img/barcelona1999.webp" alt="Camiseta Barcelona">
+        <img src="camisetas/barcelona1999.webp" alt="Camiseta Barcelona">
         <p>Barcelona 1999/2000</p>
       </div>
     `;
@@ -36,22 +36,22 @@ function mostrarEquipo(equipo) {
     titulo.textContent = "Real Madrid";
     contenido = `
       <div class="camiseta">
-        <img src="img/realmadrid.jpg" alt="Camiseta Real Madrid">
+        <img src="camisetas/realmadrid.jpg" alt="Camiseta Real Madrid">
         <p>Real Madrid 2017/18</p>
       </div>
       
       <div class="camiseta">
-        <img src="img/realmadrid1950.jpg" alt="Camiseta Real Madrid">
+        <img src="camisetas/realmadrid1950.jpg" alt="Camiseta Real Madrid">
         <p>Real Madrid 1950/1951</p>
       </div>
       
        <div class="camiseta">
-        <img src="img/realmadrid2001.jpeg" alt="Camiseta Real Madrid">
+        <img src="camisetas/realmadrid2001.jpeg" alt="Camiseta Real Madrid">
         <p>Real Madrid 2001/2002</p>
       </div>
 
         <div class="camiseta">
-        <img src="img/realmadrid2013.webp" alt="Camiseta Real Madrid">
+        <img src="camisetas/realmadrid2013.webp" alt="Camiseta Real Madrid">
         <p>Real Madrid 2013/2014</p>
       </div>
       
@@ -60,7 +60,7 @@ function mostrarEquipo(equipo) {
     titulo.textContent = "Liverpool";
     contenido = `
       <div class="camiseta">
-        <img src="img/liverpool2019.jpg" alt="Camiseta Liverpool">
+        <img src="camisetas/liverpool2019.jpg" alt="Camiseta Liverpool">
         <p>Liverpool 2019/20</p>
       </div>
     `;
@@ -68,7 +68,7 @@ function mostrarEquipo(equipo) {
     titulo.textContent = "Manchester United";
     contenido = `
       <div class="camiseta">
-        <img src="img/manchesterutd2008.jpg" alt="Camiseta Manchester United">
+        <img src="camisetas/manchesterutd2008.jpg" alt="Camiseta Manchester United">
         <p>Man. United 2020/21</p>
       </div>
     `;
