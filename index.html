@@ -6,17 +6,14 @@
   <title>Camisetas del Mundo</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- BANNER ARRIBA -->
+
   <header class="banner">
     <img src="img/1000024372.jpg" alt="Banner de camisetas">
   </header>
 
-  <!-- CONTENEDOR PRINCIPAL -->
-  <main class="layout">
-    <!-- MENÚ LATERAL -->
-    <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar">
       <h2>Ligas</h2>
       <ul>
         <li class="liga" onclick="toggleLiga('premier')">Premier League ▸</li>
@@ -31,14 +28,13 @@
           <li onclick="mostrarEquipo('real')">Real Madrid</li>
         </ul>
       </ul>
-    </aside>
+    </div>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <section class="contenido">
+    <div class="contenido">
       <h1 id="titulo">Selecciona un equipo</h1>
       <div id="info"></div>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
