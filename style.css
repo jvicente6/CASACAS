@@ -1,81 +1,99 @@
+/* Fuente global */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1c1624;
+  color: #f2f2f2;
+  display: flex;
 }
 
-/* 🔹 Banner */
-.banner {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
+/* Banner superior */
 .banner img {
   width: 100%;
-  height: 100%;
+  height: 230px;
   object-fit: cover;
-  object-position: center 65%;
+  object-position: 0 40px; /* mueve la imagen un poco hacia abajo */
   display: block;
 }
 
-/* 🔹 Contenedor principal */
-.container {
-  display: flex;
-  min-height: calc(100vh - 200px);
-}
-
-/* 🔹 Sidebar */
+/* Sidebar */
 .sidebar {
   width: 220px;
-  background-color: #111;
-  color: white;
+  background-color: #211a2b;
   padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar h2 {
-  margin-top: 0;
-  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-}
-
-.sidebar li {
-  cursor: pointer;
-  margin: 5px 0;
+  margin: 0;
 }
 
 .liga {
-  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-/* 🔹 Contenido */
-.contenido {
-  flex: 1;
-  padding: 40px;
-  text-align: center;
+.liga:hover {
+  color: #b29aff;
 }
 
+.equipos li {
+  margin-left: 10px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #cfcfcf;
+  transition: color 0.3s;
+}
+
+.equipos li:hover {
+  color: #ffffff;
+}
+
+/* Ocultar ligas por defecto */
 .oculto {
   display: none;
 }
 
-/* 🔹 Galería de camisetas */
-.galeria {
+/* Contenido principal */
+.contenido {
+  flex: 1;
+  padding: 30px;
+}
+
+.contenido h1 {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Grid para camisetas */
+#info {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: 30px;
 }
 
 .camiseta {
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #2a2038;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
 }
 
@@ -85,12 +103,13 @@ body {
 
 .camiseta img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
 }
 
-.camiseta p {
-  margin: 10px 0 0;
-  font-weight: bold;
+.camiseta h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #f2f2f2;
 }
