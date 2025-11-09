@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Camisetas del Mundo</title>
-  <!-- Fuente Poppins de Google Fonts -->
+  <!-- Fuente Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,26 +13,28 @@
     <img src="img/1000024372.jpg" alt="Banner de camisetas">
   </header>
 
-  <div class="sidebar">
-    <h2>Ligas</h2>
-    <ul>
-      <li class="liga" onclick="toggleLiga('premier')">Premier League ▸</li>
-      <ul id="premier" class="equipos oculto">
-        <li onclick="mostrarEquipo('liverpool')">Liverpool</li>
-        <li onclick="mostrarEquipo('manutd')">Man. United</li>
-      </ul>
+  <div class="main">
+    <div class="sidebar">
+      <h2>Ligas</h2>
+      <ul>
+        <li class="liga" onclick="toggleLiga('premier')">Premier League ▸</li>
+        <ul id="premier" class="equipos oculto">
+          <li onclick="mostrarEquipo('liverpool')">Liverpool</li>
+          <li onclick="mostrarEquipo('manutd')">Man. United</li>
+        </ul>
 
-      <li class="liga" onclick="toggleLiga('laliga')">LaLiga ▸</li>
-      <ul id="laliga" class="equipos oculto">
-        <li onclick="mostrarEquipo('barcelona')">Barcelona</li>
-        <li onclick="mostrarEquipo('real')">Real Madrid</li>
+        <li class="liga" onclick="toggleLiga('laliga')">LaLiga ▸</li>
+        <ul id="laliga" class="equipos oculto">
+          <li onclick="mostrarEquipo('barcelona')">Barcelona</li>
+          <li onclick="mostrarEquipo('real')">Real Madrid</li>
+        </ul>
       </ul>
-    </ul>
-  </div>
+    </div>
 
-  <div class="contenido">
-    <h1 id="titulo">Selecciona un equipo</h1>
-    <div id="info"></div>
+    <div class="contenido">
+      <h1 id="titulo">Selecciona un equipo</h1>
+      <div id="info"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
