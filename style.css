@@ -7,13 +7,15 @@ html, body {
   color: #fff;
 }
 
-/* --- BANNER --- */
+/* --- BANNER (con transparencia) --- */
 .banner {
   width: 100%;
   height: 180px;
   overflow: hidden;
   flex-shrink: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  background-color: #1a1623; /* mismo color que el fondo de la página */
 }
 
 .banner img {
@@ -21,6 +23,13 @@ html, body {
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 0.6; /* transparencia */
+  transition: opacity 0.3s ease;
+}
+
+/* Opcional: efecto sutil al pasar el mouse */
+.banner:hover img {
+  opacity: 0.75;
 }
 
 /* --- CONTENEDOR PRINCIPAL --- */
