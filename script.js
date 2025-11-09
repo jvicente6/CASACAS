@@ -25,7 +25,7 @@ function mostrarEquipo(equipo) {
   const info = document.getElementById("info");
   const titulo = document.getElementById("titulo");
 
-  titulo.textContent = equipo.charAt(0).toUpperCase() + equipo.slice(1).replace("real", "Real Madrid").replace("manutd", "Manchester United");
+  titulo.textContent = equipo.charAt(0).toUpperCase() + equipo.slice(1).replace("Real Madrid", "Real Madrid").replace("Manchester United", "Manchester United");
 
   const camisetas = todasLasCamisetas.filter(c => c.equipo === equipo);
 
