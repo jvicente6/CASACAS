@@ -1,40 +1,47 @@
 function toggleLiga(id) {
-  const lista = document.getElementById(id);
-  lista.classList.toggle('oculto');
+  const liga = document.getElementById(id);
+  liga.classList.toggle("oculto");
 }
 
 function mostrarEquipo(equipo) {
-  const titulo = document.getElementById('titulo');
-  const info = document.getElementById('info');
+  const info = document.getElementById("info");
+  const titulo = document.getElementById("titulo");
 
-  const data = {
-    liverpool: {
-      nombre: "Liverpool FC",
-      descripcion: "Camiseta 2019/20 – año en que ganaron la Premier después de 30 años.",
-      img: "img/liverpool2019.jpg"
-    },
-    manutd: {
-      nombre: "Manchester United",
-      descripcion: "Camiseta 2008 – cuando ganaron la Champions con Cristiano y Rooney.",
-      img: "img/manchesterutd2008.jpg"
-    },
-    barcelona: {
-      nombre: "FC Barcelona",
-      descripcion: "Camiseta 2011 – el equipo de Guardiola, Messi, Xavi e Iniesta.",
-      img: "img/barcelona2011.jpg"
-    },
-    real: {
-      nombre: "Real Madrid",
-      descripcion: "Camiseta 2018 – la 13ª Champions, con Cristiano y Zidane.",
-      img: "img/realmadrid.jpg"
-    }
-  };
+  let contenido = "";
 
-  if (data[equipo]) {
-    titulo.textContent = data[equipo].nombre;
-    info.innerHTML = `
-      <img src="${data[equipo].img}" alt="${data[equipo].nombre}" style="width:300px;border-radius:10px;">
-      <p>${data[equipo].descripcion}</p>
+  if (equipo === "barcelona") {
+    titulo.textContent = "Barcelona";
+    contenido = `
+      <div class="camiseta">
+        <img src="img/barcelona2011.jpg" alt="Camiseta Barcelona">
+        <p>Barcelona 2015/16</p>
+      </div>
+    `;
+  } else if (equipo === "real") {
+    titulo.textContent = "Real Madrid";
+    contenido = `
+      <div class="camiseta">
+        <img src="img/realmadrid.jpg" alt="Camiseta Real Madrid">
+        <p>Real Madrid 2017/18</p>
+      </div>
+    `;
+  } else if (equipo === "liverpool") {
+    titulo.textContent = "Liverpool";
+    contenido = `
+      <div class="camiseta">
+        <img src="img/liverpool2019.jpg" alt="Camiseta Liverpool">
+        <p>Liverpool 2019/20</p>
+      </div>
+    `;
+  } else if (equipo === "manutd") {
+    titulo.textContent = "Manchester United";
+    contenido = `
+      <div class="camiseta">
+        <img src="img/manchesterutd2008.jpg" alt="Camiseta Manchester United">
+        <p>Man. United 2020/21</p>
+      </div>
     `;
   }
+
+  info.innerHTML = contenido;
 }
