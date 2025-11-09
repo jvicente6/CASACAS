@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Camisetas del Mundo</title>
-  <!-- Fuente Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="banner">
-    <img src="img/1000024372.jpg" alt="Banner de camisetas">
+    <img src="img/1000024372.jpg" alt="Banner de camisetas" />
   </header>
 
-  <div class="main">
-    <div class="sidebar">
+  <main class="main">
+    <aside class="sidebar">
       <h2>Ligas</h2>
       <ul>
         <li class="liga" onclick="toggleLiga('premier')">Premier League ▸</li>
@@ -29,13 +28,13 @@
           <li onclick="mostrarEquipo('real')">Real Madrid</li>
         </ul>
       </ul>
-    </div>
+    </aside>
 
-    <div class="contenido">
+    <section class="contenido">
       <h1 id="titulo">Selecciona un equipo</h1>
       <div id="info"></div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
