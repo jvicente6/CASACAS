@@ -13,6 +13,7 @@ html, body {
   height: 180px;
   overflow: hidden;
   flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* línea inferior */
 }
 
 .banner img {
@@ -26,6 +27,7 @@ html, body {
 .contenido-principal {
   display: flex;
   height: calc(100vh - 180px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* línea entre banner y contenido */
 }
 
 /* --- SIDEBAR --- */
@@ -36,6 +38,7 @@ html, body {
   box-sizing: border-box;
   overflow-y: auto;
   height: 100%;
+  border-right: 1px solid rgba(255, 255, 255, 0.2); /* línea separadora */
 }
 
 .sidebar h2 {
@@ -60,18 +63,13 @@ html, body {
   color: #d3bfff;
 }
 
-/* --- CONTENIDO PRINCIPAL --- */
+/* --- CONTENIDO --- */
 .contenido {
   flex: 1;
   padding: 30px;
   background-color: #1a1623;
   overflow-y: auto;
-}
-
-h1 {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2); /* línea separadora */
 }
 
 /* --- BUSCADOR --- */
@@ -99,7 +97,6 @@ h1 {
   color: #b8b0d0;
 }
 
-/* Efecto hover y focus inspirado en las camisetas */
 .buscador input:hover,
 .buscador input:focus {
   background-color: #2c2540;
@@ -110,24 +107,21 @@ h1 {
 /* --- CAMISETAS --- */
 #info {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  justify-items: center;
-  align-items: start;
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* línea superior dentro del área */
+  padding-top: 20px;
 }
 
-#info .camiseta {
+#info div {
   background-color: #231e2e;
   border-radius: 12px;
   text-align: center;
   padding: 15px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-  cursor: pointer;
 }
 
-#info .camiseta:hover {
+#info div:hover {
   transform: scale(1.07);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   background-color: #2c2540;
@@ -141,36 +135,11 @@ h1 {
   transition: transform 0.25s ease;
 }
 
-#info .camiseta:hover img {
+#info div:hover img {
   transform: scale(1.05);
 }
 
-#info p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #e0d8ff;
-}
-
-/* --- SCROLL PERSONALIZADO --- */
-.sidebar::-webkit-scrollbar,
-.contenido::-webkit-scrollbar {
-  width: 8px;
-}
-
-.sidebar::-webkit-scrollbar-thumb,
-.contenido::-webkit-scrollbar-thumb {
-  background-color: #3a3158;
-  border-radius: 4px;
-}
-
-.sidebar::-webkit-scrollbar-thumb:hover,
-.contenido::-webkit-scrollbar-thumb:hover {
-  background-color: #51457a;
-}
-
-/* --- OCULTAR EQUIPOS --- */
+/* Ocultar equipos */
 .oculto {
   display: none;
-}
-
 }
