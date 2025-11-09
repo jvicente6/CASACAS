@@ -4,24 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Camisetas del Mundo</title>
-
-  <!-- Fuente Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Enlace al CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Banner superior -->
   <header class="banner">
     <img src="img/1000024372.jpg" alt="Banner de camisetas" />
   </header>
 
-  <!-- Contenedor principal -->
   <div class="contenido-principal">
-    
-    <!-- Sidebar con ligas -->
     <aside class="sidebar">
       <h2>Ligas</h2>
       <ul>
@@ -39,25 +30,22 @@
       </ul>
     </aside>
 
-    <!-- Contenido principal -->
     <main class="contenido">
-      <h1>Selecciona un equipo</h1>
+      <h1 id="titulo">Selecciona un equipo</h1>
 
-      <!-- 🔍 Buscador -->
+      <!-- Buscador -->
       <div class="buscador">
         <input 
           type="text" 
           id="buscador" 
-          placeholder="Buscar camisetas..." 
-          onkeyup="filtrarCamisetas()" 
+          placeholder="Buscar camiseta..." 
+          onkeyup="filtrarCamisetas()"
         />
       </div>
 
-      <h2>CAMISETAS DESTACADAS</h2>
-
       <!-- Contenedor de camisetas -->
       <div id="info">
-        <div class="camiseta" data-nombre="real madrid 2011 12 realmadrid">
+        <div class="camiseta" data-nombre="real madrid 2011 2012 realmadrid">
           <img src="img/realmadrid.jpg" alt="Real Madrid">
           <p>Real Madrid 2011/12</p>
         </div>
@@ -65,7 +53,7 @@
           <img src="img/barcelona2011.jpg" alt="Barcelona">
           <p>Barcelona 2011</p>
         </div>
-        <div class="camiseta" data-nombre="liverpool 2019 premier">
+        <div class="camiseta" data-nombre="liverpool 2019 premier league">
           <img src="img/liverpool2019.jpg" alt="Liverpool">
           <p>Liverpool 2019</p>
         </div>
@@ -77,7 +65,6 @@
     </main>
   </div>
 
-  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
