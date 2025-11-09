@@ -51,23 +51,13 @@ html, body {
 }
 
 .sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   cursor: pointer;
   transition: color 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .sidebar li:hover {
   color: #d3bfff;
-}
-
-/* --- LOGOS DE LIGAS --- */
-.liga-logo {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
 }
 
 /* --- CONTENIDO --- */
@@ -91,6 +81,7 @@ h1 {
   gap: 20px;
 }
 
+/* Tarjeta camiseta */
 .card {
   background-color: #231e2e;
   border-radius: 12px;
@@ -106,6 +97,7 @@ h1 {
   background-color: #2c2540;
 }
 
+/* Imagen */
 .card img {
   width: 100%;
   border-radius: 8px;
@@ -118,7 +110,7 @@ h1 {
   transform: scale(1.08);
 }
 
-/* --- EQUIPOS OCULTOS --- */
+/* Oculto */
 .oculto {
   display: none;
 }
