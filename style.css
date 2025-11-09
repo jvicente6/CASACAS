@@ -1,39 +1,33 @@
-/* Estilos base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Fondo general */
 body {
-  background-color: #1e1b26;
-  color: #eaeaea;
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #1a1623;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Banner */
 .banner {
   width: 100%;
-  height: 180px;
+  height: 180px; /* Ajustá el tamaño aquí */
   overflow: hidden;
-  display: block;
-  position: relative;
-  z-index: 10;
+  flex-shrink: 0;
 }
 
 .banner img {
   width: 100%;
-  height: 70%;
+  height: 100%;
   object-fit: cover;
-  object-position: center 70%;
-  display: block;
 }
 
 /* Contenedor principal */
-.contenido-principal {
+.main-container {
   display: flex;
-  width: 100%;
-  min-height: calc(100vh - 180px); /* ocupa el resto del espacio debajo del banner */
+  flex: 1;
+  min-height: 0; /* muy importante para evitar errores de altura */
 }
 
 /* Sidebar */
@@ -41,93 +35,39 @@ body {
   width: 250px;
   background-color: #18141f;
   padding: 25px 20px;
-  font-size: 15px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: calc(100vh - 180px); /* ocupa todo el espacio restante bajo el banner */
-  overflow-y: auto; /* agrega scroll si hay muchos equipos */
+  overflow-y: auto;
 }
 
-.sidebar h2 {
-  font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar li {
-  cursor: pointer;
-  padding: 6px 0;
-  color: #cfcfcf;
-  transition: color 0.2s ease;
-}
-
-.sidebar li:hover {
-  color: #ffffff;
-}
-
-.equipos {
-  margin-left: 15px;
-}
-
-.oculto {
-  display: none;
-}
-
-/* Contenido principal */
+/* Contenido */
 .contenido {
   flex: 1;
-  padding: 40px;
+  padding: 30px;
+  background-color: #1a1623;
+  overflow-y: auto;
+}
+
+h1 {
   text-align: center;
-  background-color: #1e1b26;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-#titulo {
-  font-size: 28px;
-  margin-bottom: 25px;
-  color: #ffffff;
-}
-
-/* Grilla de camisetas */
-#info {
+.camisetas {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 25px;
-  justify-items: center;
-  width: 100%;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.camiseta {
-  background-color: #2b2533;
+.camisetas div {
+  background-color: #231e2e;
   border-radius: 12px;
+  text-align: center;
   padding: 15px;
-  width: 200px;
-  transition: transform 0.2s ease;
 }
 
-.camiseta:hover {
-  transform: scale(1.05);
-}
-
-.camiseta img {
+.camisetas img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
+  display: block;
   margin-bottom: 10px;
-}
-
-.camiseta p {
-  margin: 0;
-  font-weight: 500;
-  color: #eaeaea;
 }
