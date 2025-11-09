@@ -23,13 +23,8 @@ html, body {
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0.6; /* transparencia */
+  opacity: 1; /* transparencia */
   transition: opacity 0.3s ease;
-}
-
-/* Opcional: efecto sutil al pasar el mouse */
-.banner:hover img {
-  opacity: 0.75;
 }
 
 /* --- CONTENEDOR PRINCIPAL --- */
