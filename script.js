@@ -4,11 +4,10 @@ function toggleLiga(id) {
   liga.classList.toggle("oculto");
 }
 
-// --- MOSTRAR CAMISETAS SEGÚN EQUIPO ---
+// --- MOSTRAR EQUIPO ---
 function mostrarEquipo(equipo) {
   const info = document.getElementById("info");
   const titulo = document.getElementById("titulo");
-
   let contenido = "";
 
   if (equipo === "barcelona") {
@@ -31,7 +30,8 @@ function mostrarEquipo(equipo) {
         <p>Barcelona 1999/2000</p>
       </div>
     `;
-  } else if (equipo === "real") {
+  } 
+  else if (equipo === "real") {
     titulo.textContent = "Real Madrid";
     contenido = `
       <div class="camiseta" data-nombre="real madrid 2017 2018 realmadrid">
@@ -51,7 +51,8 @@ function mostrarEquipo(equipo) {
         <p>Real Madrid 2013/2014</p>
       </div>
     `;
-  } else if (equipo === "liverpool") {
+  } 
+  else if (equipo === "liverpool") {
     titulo.textContent = "Liverpool";
     contenido = `
       <div class="camiseta" data-nombre="liverpool 2019 2020 premier">
@@ -59,7 +60,8 @@ function mostrarEquipo(equipo) {
         <p>Liverpool 2019/20</p>
       </div>
     `;
-  } else if (equipo === "manutd") {
+  } 
+  else if (equipo === "manutd") {
     titulo.textContent = "Manchester United";
     contenido = `
       <div class="camiseta" data-nombre="manchester united 2008 2020 manutd premier">
@@ -72,7 +74,7 @@ function mostrarEquipo(equipo) {
   info.innerHTML = contenido;
 }
 
-// --- BUSCADOR DE CAMISETAS (FUNCIONA EN TODAS) ---
+// --- BUSCADOR DE CAMISETAS ---
 function filtrarCamisetas() {
   const input = document.getElementById("buscador").value.toLowerCase();
   const camisetas = document.querySelectorAll(".camiseta");
