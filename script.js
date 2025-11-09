@@ -6,10 +6,10 @@ function toggleLiga(id) {
 
 // --- DATOS GLOBALES DE CAMISETAS ---
 const todasLasCamisetas = [
-  { nombre: "Real Madrid 2011/12", equipo: "real", imagen: "camisetas/realmadrid.jpg" },
-  { nombre: "Real Madrid 1950/51", equipo: "real", imagen: "camisetas/realmadrid1950.jpg" },
-  { nombre: "Real Madrid 2001/02", equipo: "real", imagen: "camisetas/realmadrid2001.jpeg" },
-  { nombre: "Real Madrid 2013/14", equipo: "real", imagen: "camisetas/realmadrid2013.webp" },
+  { nombre: "Real Madrid 2011/12", equipo: "Real Madrid", imagen: "camisetas/realmadrid.jpg" },
+  { nombre: "Real Madrid 1950/51", equipo: "Real Madrid", imagen: "camisetas/realmadrid1950.jpg" },
+  { nombre: "Real Madrid 2001/02", equipo: "Real Madrid", imagen: "camisetas/realmadrid2001.jpeg" },
+  { nombre: "Real Madrid 2013/14", equipo: "Real Madrid", imagen: "camisetas/realmadrid2013.webp" },
 
   { nombre: "Barcelona 2010/11", equipo: "barcelona", imagen: "camisetas/barcelona2011.jpg" },
   { nombre: "Barcelona 2015/16", equipo: "barcelona", imagen: "camisetas/barcelona2015.jpg" },
@@ -17,7 +17,7 @@ const todasLasCamisetas = [
   { nombre: "Barcelona 1999/2000", equipo: "barcelona", imagen: "camisetas/barcelona1999.webp" },
 
   { nombre: "Liverpool 2019/20", equipo: "liverpool", imagen: "camisetas/liverpool2019.jpg" },
-  { nombre: "Manchester United 2008", equipo: "manutd", imagen: "camisetas/manchesterutd2008.jpg" },
+  { nombre: "Manchester United 2008", equipo: "Manchester United", imagen: "camisetas/manchesterutd2008.jpg" },
 ];
 
 // --- MOSTRAR EQUIPO ---
