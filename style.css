@@ -11,32 +11,38 @@ body {
 
 /* Banner */
 .banner {
-  width: 100%;
+  width: 100vw; /* ocupa todo el ancho visible */
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 .banner img {
   width: 100%;
-  height: 260px;
+  height: 270px;
   object-fit: cover;
   object-position: center 70%;
   display: block;
 }
 
-/* Contenedor principal */
+/* Estructura principal */
 .main {
   display: flex;
   flex: 1;
-  min-height: calc(100vh - 260px); /* resto del espacio sin el banner */
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 240px;
+  width: 250px;
   background-color: #18141f;
   padding: 25px 20px;
   box-sizing: border-box;
   font-size: 15px;
+  height: 100%;
 }
 
 .sidebar h2 {
@@ -63,7 +69,6 @@ body {
   color: #ffffff;
 }
 
-/* Equipos */
 .equipos {
   margin-left: 15px;
 }
@@ -75,14 +80,19 @@ body {
 /* Contenido principal */
 .contenido {
   flex: 1;
-  padding: 30px;
+  padding: 30px 40px;
   text-align: center;
   background-color: #1e1b26;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #titulo {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 25px;
   color: #ffffff;
 }
 
@@ -90,8 +100,10 @@ body {
 #info {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 25px;
   justify-items: center;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .camiseta {
@@ -117,4 +129,3 @@ body {
   font-weight: 500;
   color: #eaeaea;
 }
-
