@@ -22,6 +22,9 @@ const todasLasCamisetas = [
   { nombre: "Liverpool 1983/84", equipo: "liverpool", imagen: "camisetas/liverpool1983.jpg" },
   
   { nombre: "Manchester United 2008", equipo: "Manchester United", imagen: "camisetas/manchesterutd2008.jpg" },
+  { nombre: "Manchester United 1992", equipo: "Manchester United", imagen: "camisetas/manchesterutd1992.webp" },
+  { nombre: "Manchester United 1998", equipo: "Manchester United", imagen: "camisetas/manchesterutd1998.avif" },
+  { nombre: "Manchester United 1999", equipo: "Manchester United", imagen: "camisetas/manchesterutd1999.png" },
 ];
 
 // --- MOSTRAR EQUIPO ---
