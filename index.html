@@ -42,23 +42,34 @@
     <!-- Contenido principal -->
     <main class="contenido">
       <h1 id="titulo">Selecciona un equipo</h1>
-      <h2 id="titulo">CAMISETAS destacadas</h2>
+
+      <!-- 🔍 Buscador -->
+      <div class="buscador">
+        <input 
+          type="text" 
+          id="buscadorInput" 
+          placeholder="Buscar camiseta..." 
+          onkeyup="buscarCamiseta()"
+        />
+      </div>
+
+      <h2>CAMISETAS destacadas</h2>
 
       <!-- Contenedor donde aparecen las camisetas -->
       <div id="info">
-        <div>
+        <div class="camiseta">
           <img src="img/realmadrid.jpg" alt="Real Madrid">
           <p>Real Madrid 2011/12</p>
         </div>
-        <div>
+        <div class="camiseta">
           <img src="img/barcelona2011.jpg" alt="Barcelona">
           <p>Barcelona 2011</p>
         </div>
-        <div>
+        <div class="camiseta">
           <img src="img/liverpool2019.jpg" alt="Liverpool">
           <p>Liverpool 2019</p>
         </div>
-        <div>
+        <div class="camiseta">
           <img src="img/manchesterutd2008.jpg" alt="Manchester United">
           <p>Manchester United 2008</p>
         </div>
@@ -67,6 +78,16 @@
   </div>
 
   <!-- Script -->
-  <script src="script.js"></script>
+  <script>
+    // 🔍 Buscador simple
+    function buscarCamiseta() {
+      const input = document.getElementById("buscadorInput").value.toLowerCase();
+      const camisetas = document.querySelectorAll("#info .camiseta");
+      camisetas.forEach(c => {
+        const texto = c.textContent.toLowerCase();
+        c.style.display = texto.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
 </body>
 </html>
