@@ -1,14 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  height: 100vh;
-  background: #f3f3f3;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
-/* --- Banner --- */
+
 .banner {
   width: 100%;
-  height: 160px; /* más chico que antes */
+  height: 150px; /* altura más baja */
   overflow: hidden;
 }
 
@@ -16,106 +14,44 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 70%; /* BAJA la imagen sin tocar el bloque */
+  object-position: center 80%; /* BAJA la imagen sin mover el bloque */
   display: block;
 }
 
-/* --- Layout debajo del banner --- */
-.layout {
+.container {
   display: flex;
-  height: calc(100vh - 200px); /* ocupa todo el alto restante */
+  min-height: calc(100vh - 150px); /* todo el alto menos el banner */
 }
 
-/* --- Sidebar (menú lateral) --- */
 .sidebar {
-  width: 250px;
-  background: #111;
-  color: #fff;
-  padding: 1rem;
-  overflow-y: auto;
+  width: 220px;
+  background-color: #111;
+  color: white;
+  padding: 20px;
 }
 
 .sidebar h2 {
+  margin-top: 0;
   text-align: center;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.liga {
+.sidebar li {
   cursor: pointer;
-  font-weight: bold;
-  margin: 0.5rem 0;
+  margin: 5px 0;
 }
 
-.equipos li {
-  margin-left: 1rem;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.equipos li:hover {
-  color: #fff;
-}
-
-.oculto {
-  display: none;
-}
-
-/* --- Contenido principal --- */
 .contenido {
   flex: 1;
-  background: #f3f3f3;
-  padding: 2rem;
-  overflow-y: auto;
-}
-
-
-}
-
-.sidebar {
-  width: 250px;
-  background: #111;
-  color: #fff;
-  padding: 1rem;
-  overflow-y: auto;
-}
-
-.sidebar h2 {
+  padding: 40px;
   text-align: center;
-  margin-bottom: 1rem;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.liga {
-  cursor: pointer;
-  font-weight: bold;
-  margin: 0.5rem 0;
-}
-
-.equipos li {
-  margin-left: 1rem;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.equipos li:hover {
-  color: #fff;
 }
 
 .oculto {
   display: none;
 }
 
-.contenido {
-  flex: 1;
-  padding: 2rem;
-  overflow-y: auto;
-}
