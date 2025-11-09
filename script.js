@@ -50,12 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const info = document.getElementById("info");
   const titulo = document.getElementById("titulo");
 
+  // --- NUEVO: guardar las camisetas destacadas del HTML inicial ---
+  const camisetasDestacadasHTML = info.innerHTML;
+
   buscador.addEventListener("input", () => {
     const texto = buscador.value.toLowerCase().trim();
 
+    // --- NUEVO: si el buscador está vacío, mostrar camisetas destacadas ---
     if (texto === "") {
-      titulo.textContent = "Selecciona un equipo";
-      info.innerHTML = "";
+      titulo.textContent = "Camisetas destacadas";
+      info.innerHTML = camisetasDestacadasHTML;
       return;
     }
 
