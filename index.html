@@ -8,18 +8,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- BANNER -->
   <header class="banner">
     <img src="img/1000024372.jpg" alt="Banner de camisetas" />
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <div class="contenido-principal">
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <h2>Ligas</h2>
       <ul>
         <li class="liga" onclick="toggleLiga('premier')">🇬🇧 Premier League ▸</li>
         <ul id="premier" class="equipos oculto">
           <li onclick="mostrarEquipo('liverpool')">Liverpool</li>
-          <li onclick="mostrarEquipo('manutd')">Man. United</li>
+          <li onclick="mostrarEquipo('manutd')">Manchester United</li>
         </ul>
 
         <li class="liga" onclick="toggleLiga('laliga')">🇪🇸 LaLiga ▸</li>
@@ -30,41 +33,42 @@
       </ul>
     </aside>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="contenido">
       <h1 id="titulo">Selecciona un equipo</h1>
 
-      <!-- Buscador -->
+      <!-- BUSCADOR -->
       <div class="buscador">
         <input 
           type="text" 
           id="buscador" 
-          placeholder="Buscar camiseta..." 
-          onkeyup="filtrarCamisetas()"
+          placeholder="Buscar camiseta..."
         />
       </div>
 
-      <!-- Contenedor de camisetas -->
+      <!-- CONTENEDOR DE CAMISETAS -->
       <div id="info">
-        <div class="camiseta" data-nombre="real madrid 2011 2012 realmadrid">
-          <img src="img/realmadrid.jpg" alt="Real Madrid">
+        <div class="camiseta">
+          <img src="camisetas/realmadrid.jpg" alt="Real Madrid">
           <p>Real Madrid 2011/12</p>
         </div>
-        <div class="camiseta" data-nombre="barcelona 2011 fc barça">
-          <img src="img/barcelona2011.jpg" alt="Barcelona">
+        <div class="camiseta">
+          <img src="camisetas/barcelona2011.jpg" alt="Barcelona">
           <p>Barcelona 2011</p>
         </div>
-        <div class="camiseta" data-nombre="liverpool 2019 premier league">
-          <img src="img/liverpool2019.jpg" alt="Liverpool">
+        <div class="camiseta">
+          <img src="camisetas/liverpool2019.jpg" alt="Liverpool">
           <p>Liverpool 2019</p>
         </div>
-        <div class="camiseta" data-nombre="manchester united 2008 manutd premier">
-          <img src="img/manchesterutd2008.jpg" alt="Manchester United">
+        <div class="camiseta">
+          <img src="camisetas/manchesterutd2008.jpg" alt="Manchester United">
           <p>Manchester United 2008</p>
         </div>
       </div>
     </main>
   </div>
 
+  <!-- SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
