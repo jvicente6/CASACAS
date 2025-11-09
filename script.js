@@ -1,111 +1,73 @@
-// --- MOSTRAR / OCULTAR LIGAS ---
+// --- LÓGICA PARA MOSTRAR Y OCULTAR LIGAS ---
 function toggleLiga(id) {
   const liga = document.getElementById(id);
   liga.classList.toggle("oculto");
 }
+
+// --- DATOS GLOBALES DE CAMISETAS ---
+const todasLasCamisetas = [
+  { nombre: "Real Madrid 2011/12", equipo: "real", imagen: "camisetas/realmadrid.jpg" },
+  { nombre: "Real Madrid 1950/51", equipo: "real", imagen: "camisetas/realmadrid1950.jpg" },
+  { nombre: "Real Madrid 2001/02", equipo: "real", imagen: "camisetas/realmadrid2001.jpeg" },
+  { nombre: "Real Madrid 2013/14", equipo: "real", imagen: "camisetas/realmadrid2013.webp" },
+
+  { nombre: "Barcelona 2010/11", equipo: "barcelona", imagen: "camisetas/barcelona2011.jpg" },
+  { nombre: "Barcelona 2015/16", equipo: "barcelona", imagen: "camisetas/barcelona2015.jpg" },
+  { nombre: "Barcelona 2008/09", equipo: "barcelona", imagen: "camisetas/barcelona2008-2009.jpeg" },
+  { nombre: "Barcelona 1999/2000", equipo: "barcelona", imagen: "camisetas/barcelona1999.webp" },
+
+  { nombre: "Liverpool 2019/20", equipo: "liverpool", imagen: "camisetas/liverpool2019.jpg" },
+  { nombre: "Manchester United 2008", equipo: "manutd", imagen: "camisetas/manchesterutd2008.jpg" },
+];
 
 // --- MOSTRAR EQUIPO ---
 function mostrarEquipo(equipo) {
   const info = document.getElementById("info");
   const titulo = document.getElementById("titulo");
 
-  let contenido = "";
+  titulo.textContent = equipo.charAt(0).toUpperCase() + equipo.slice(1).replace("real", "Real Madrid").replace("manutd", "Manchester United");
 
-  switch (equipo) {
-    case "barcelona":
-      titulo.textContent = "Barcelona";
-      contenido = `
-        <div class="camiseta">
-          <img src="camisetas/barcelona2011.jpg" alt="Camiseta Barcelona">
-          <p>Barcelona 2010/11</p>
-        </div>
-        <div class="camiseta">
-          <img src="camisetas/barcelona2015.jpg" alt="Camiseta Barcelona">
-          <p>Barcelona 2015/16</p>
-        </div>
-        <div class="camiseta">
-          <img src="camisetas/barcelona2008-2009.jpeg" alt="Camiseta Barcelona">
-          <p>Barcelona 2008/09</p>
-        </div>
-        <div class="camiseta">
-          <img src="camisetas/barcelona1999.webp" alt="Camiseta Barcelona">
-          <p>Barcelona 1999/2000</p>
-        </div>
-      `;
-      break;
+  const camisetas = todasLasCamisetas.filter(c => c.equipo === equipo);
 
-    case "real":
-      titulo.textContent = "Real Madrid";
-      contenido = `
-        <div class="camiseta">
-          <img src="camisetas/realmadrid.jpg" alt="Camiseta Real Madrid">
-          <p>Real Madrid 2017/18</p>
-        </div>
-        <div class="camiseta">
-          <img src="camisetas/realmadrid1950.jpg" alt="Camiseta Real Madrid">
-          <p>Real Madrid 1950/51</p>
-        </div>
-        <div class="camiseta">
-          <img src="camisetas/realmadrid2001.jpeg" alt="Camiseta Real Madrid">
-          <p>Real Madrid 2001/02</p>
-        </div>
-        <div class="camiseta">
-          <img src="camisetas/realmadrid2013.webp" alt="Camiseta Real Madrid">
-          <p>Real Madrid 2013/14</p>
-        </div>
-      `;
-      break;
-
-    case "liverpool":
-      titulo.textContent = "Liverpool";
-      contenido = `
-        <div class="camiseta">
-          <img src="camisetas/liverpool2019.jpg" alt="Camiseta Liverpool">
-          <p>Liverpool 2019/20</p>
-        </div>
-      `;
-      break;
-
-    case "manutd":
-      titulo.textContent = "Manchester United";
-      contenido = `
-        <div class="camiseta">
-          <img src="camisetas/manchesterutd2008.jpg" alt="Camiseta Manchester United">
-          <p>Manchester United 2008/09</p>
-        </div>
-      `;
-      break;
-
-    default:
-      titulo.textContent = "Selecciona un equipo";
-      contenido = "";
-      break;
-  }
-
-  info.innerHTML = contenido;
-
-  // Vuelve a activar el buscador después de cambiar el contenido
-  activarBuscador();
+  info.innerHTML = camisetas.map(c => `
+    <div class="camiseta">
+      <img src="${c.imagen}" alt="${c.nombre}">
+      <p>${c.nombre}</p>
+    </div>
+  `).join("");
 }
 
-// --- BUSCADOR ---
-function activarBuscador() {
+// --- BUSCADOR GLOBAL ---
+document.addEventListener("DOMContentLoaded", () => {
   const buscador = document.getElementById("buscador");
   const info = document.getElementById("info");
+  const titulo = document.getElementById("titulo");
 
-  if (!buscador) return;
+  buscador.addEventListener("input", () => {
+    const texto = buscador.value.toLowerCase().trim();
 
-  buscador.addEventListener("input", function () {
-    const texto = this.value.toLowerCase().trim();
-    const camisetas = info.querySelectorAll(".camiseta");
+    if (texto === "") {
+      titulo.textContent = "Selecciona un equipo";
+      info.innerHTML = "";
+      return;
+    }
 
-    camisetas.forEach(camiseta => {
-      const nombre = camiseta.textContent.toLowerCase();
-      camiseta.style.display = nombre.includes(texto) ? "block" : "none";
-    });
+    const resultados = todasLasCamisetas.filter(c =>
+      c.nombre.toLowerCase().includes(texto)
+    );
+
+    if (resultados.length === 0) {
+      info.innerHTML = `<p style="text-align:center;">No se encontraron resultados.</p>`;
+      return;
+    }
+
+    titulo.textContent = "Resultados de búsqueda";
+
+    info.innerHTML = resultados.map(c => `
+      <div class="camiseta">
+        <img src="${c.imagen}" alt="${c.nombre}">
+        <p>${c.nombre}</p>
+      </div>
+    `).join("");
   });
-}
-
-// --- INICIALIZAR AL CARGAR ---
-document.addEventListener("DOMContentLoaded", activarBuscador);
-
+});
