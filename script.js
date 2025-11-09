@@ -24,6 +24,22 @@ function mostrarEquipo(equipo) {
         <img src="img/realmadrid.jpg" alt="Camiseta Real Madrid">
         <p>Real Madrid 2017/18</p>
       </div>
+      
+      <div class="camiseta">
+        <img src="img/realmadrid1950.jpg" alt="Camiseta Real Madrid">
+        <p>Real Madrid 1950/1951</p>
+      </div>
+      
+       <div class="camiseta">
+        <img src="img/realmadrid2001.jpeg" alt="Camiseta Real Madrid">
+        <p>Real Madrid 2001/2002</p>
+      </div>
+
+        <div class="camiseta">
+        <img src="img/realmadrid2013.webp" alt="Camiseta Real Madrid">
+        <p>Real Madrid 2013/2014</p>
+      </div>
+      
     `;
   } else if (equipo === "liverpool") {
     titulo.textContent = "Liverpool";
