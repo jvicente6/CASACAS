@@ -18,8 +18,8 @@ const todasLasCamisetas = [
 
   { nombre: "Liverpool 2019/20", equipo: "liverpool", imagen: "camisetas/liverpool2019.jpg" },
   { nombre: "Liverpool 2004/05", equipo: "liverpool", imagen: "camisetas/liverpool2004.png" },
-  { nombre: "Liverpool 2006/07", equipo: "liverpool", imagen: "camisetas/liverpool2006.jpg.png" },
-  { nombre: "Liverpool 1983/84", equipo: "liverpool", imagen: "camisetas/liverpool1983.jpg.png" },
+  { nombre: "Liverpool 2006/07", equipo: "liverpool", imagen: "camisetas/liverpool2006.jpg" },
+  { nombre: "Liverpool 1983/84", equipo: "liverpool", imagen: "camisetas/liverpool1983.jpg" },
   
   { nombre: "Manchester United 2008", equipo: "Manchester United", imagen: "camisetas/manchesterutd2008.jpg" },
 ];
