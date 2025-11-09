@@ -13,7 +13,7 @@ function mostrarEquipo(equipo) {
     titulo.textContent = "Barcelona";
     contenido = `
       <div class="camiseta">
-        <img src="camisetas/barcelona2011.jpg" alt="Camiseta Barcelona">
+        <img src="camisetas/barcelona2010.webp" alt="Camiseta Barcelona">
         <p>Barcelona 2010/11</p>
       </div>
       
