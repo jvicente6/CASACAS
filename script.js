@@ -14,7 +14,22 @@ function mostrarEquipo(equipo) {
     contenido = `
       <div class="camiseta">
         <img src="img/barcelona2011.jpg" alt="Camiseta Barcelona">
+        <p>Barcelona 2010/11</p>
+      </div>
+      
+      <div class="camiseta">
+        <img src="img/barcelona2015.jpg" alt="Camiseta Barcelona">
         <p>Barcelona 2015/16</p>
+      </div>
+      
+      <div class="camiseta">
+        <img src="img/barcelona2008-2009.jpeg" alt="Camiseta Barcelona">
+        <p>Barcelona 2008/09</p>
+      </div>
+
+       <div class="camiseta">
+        <img src="img/barcelona1999.webp" alt="Camiseta Barcelona">
+        <p>Barcelona 1999/2000</p>
       </div>
     `;
   } else if (equipo === "real") {
