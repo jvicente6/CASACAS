@@ -27,14 +27,19 @@ const todasLasCamisetas = [
   { nombre: "Manchester United 1999", equipo: "Manchester United", imagen: "camisetas/manchesterutd1999.png" },
 ];
 
+// --- REFERENCIAS DEL DOM ---
+const info = document.getElementById("info");
+const titulo = document.getElementById("titulo");
+const btnVolver = document.getElementById("btnVolver");
+
+// Guardar camisetas destacadas iniciales
+const camisetasDestacadasHTML = info.innerHTML;
+
 // --- MOSTRAR EQUIPO ---
 function mostrarEquipo(equipo) {
-  const info = document.getElementById("info");
-  const titulo = document.getElementById("titulo");
+  titulo.textContent = equipo.charAt(0).toUpperCase() + equipo.slice(1);
 
-  titulo.textContent = equipo.charAt(0).toUpperCase() + equipo.slice(1).replace("Real Madrid", "Real Madrid").replace("Manchester United", "Manchester United");
-
-  const camisetas = todasLasCamisetas.filter(c => c.equipo === equipo);
+  const camisetas = todasLasCamisetas.filter(c => c.equipo.toLowerCase() === equipo.toLowerCase());
 
   info.innerHTML = camisetas.map(c => `
     <div class="camiseta">
@@ -42,24 +47,32 @@ function mostrarEquipo(equipo) {
       <p>${c.nombre}</p>
     </div>
   `).join("");
+
+  // Mostrar el botón de volver
+  btnVolver.classList.remove("oculto");
+
+  // Limpiar buscador al seleccionar equipo
+  document.getElementById("buscador").value = "";
+}
+
+// --- VOLVER A CAMISETAS DESTACADAS ---
+function mostrarDestacadas() {
+  info.innerHTML = camisetasDestacadasHTML;
+  titulo.textContent = "Camisetas destacadas";
+
+  // Ocultar el botón de volver
+  btnVolver.classList.add("oculto");
 }
 
 // --- BUSCADOR GLOBAL ---
 document.addEventListener("DOMContentLoaded", () => {
   const buscador = document.getElementById("buscador");
-  const info = document.getElementById("info");
-  const titulo = document.getElementById("titulo");
-
-  // --- NUEVO: guardar las camisetas destacadas del HTML inicial ---
-  const camisetasDestacadasHTML = info.innerHTML;
 
   buscador.addEventListener("input", () => {
     const texto = buscador.value.toLowerCase().trim();
 
-    // --- NUEVO: si el buscador está vacío, mostrar camisetas destacadas ---
     if (texto === "") {
-      titulo.textContent = "Camisetas destacadas";
-      info.innerHTML = camisetasDestacadasHTML;
+      mostrarDestacadas();
       return;
     }
 
@@ -80,5 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>${c.nombre}</p>
       </div>
     `).join("");
+
+    // Ocultar botón de volver mientras se buscan resultados
+    btnVolver.classList.add("oculto");
   });
 });
